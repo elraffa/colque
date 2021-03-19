@@ -18,6 +18,8 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          description
+          tag
         }
       }
     }
@@ -25,7 +27,11 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header
+        siteTitle={data.site.siteMetadata?.title || `Title`}
+        siteDescription={data.site.siteMetadata?.description}
+        siteTag={data.site.siteMetadata?.tag}
+      />
       <div
         style={{
           margin: `0 auto`,
@@ -39,9 +45,9 @@ const Layout = ({ children }) => {
             marginTop: `2rem`,
           }}
         >
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()}, Diseño y desarrollo
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="https://www.mktdigitalideas.com">MKTDigital Ideas</a>
         </footer>
       </div>
     </>
