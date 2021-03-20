@@ -610,8 +610,12 @@ pre tt:after {
     font-size: 100%;
   }
 
+  .about-item {
+    flex-direction: column;
+  }
+
   .about-items {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr 1fr !important;
   }
 }
 

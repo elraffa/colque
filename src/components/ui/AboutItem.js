@@ -5,6 +5,7 @@ import Button from "../ui/Button"
 const AboutItem = ({ aboutItemIcon, aboutItemTitle, aboutItemText }) => {
   return (
     <div
+      className="about-item"
       style={{
         margin: "0",
         display: "flex",
@@ -12,7 +13,10 @@ const AboutItem = ({ aboutItemIcon, aboutItemTitle, aboutItemText }) => {
         justifyContent: "center",
       }}
     >
-      <div style={{ fontSize: "5rem", flexGrow: "1", textAlign: "center" }}>
+      <div
+        className="about-icon"
+        style={{ fontSize: "5rem", flexGrow: "1", textAlign: "center" }}
+      >
         {aboutItemIcon}
       </div>
       <div style={{ flexGrow: "4" }}>
