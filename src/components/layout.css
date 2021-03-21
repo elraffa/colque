@@ -622,6 +622,10 @@ pre tt:after {
   .about-items {
     grid-template-columns: 1fr 1fr !important;
   }
+
+  .location {
+    flex-direction: column;
+  }
 }
 
 @media only screen and (min-width: 480px) {

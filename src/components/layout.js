@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Location from "../components/ui/Location"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -40,16 +41,16 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Diseño y desarrollo
-          {` `}
-          <a href="https://www.mktdigitalideas.com">MKTDigital Ideas</a>
-        </footer>
       </div>
+      <footer
+        style={{
+          marginTop: `2rem`,
+        }}
+      >
+        <Location />© {new Date().getFullYear()}, Diseño y desarrollo
+        {` `}
+        <a href="https://www.mktdigitalideas.com">MKTDigital Ideas</a>
+      </footer>
     </>
   )
 }
