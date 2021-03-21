@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/vrv4wnf.css");
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -10,8 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: interstate, sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -601,6 +602,10 @@ pre tt:after {
 
 .button-main:hover {
   background-color: #4c4275;
+}
+
+.social a {
+  color: white;
 }
 
 /* Media Queries */
