@@ -23,7 +23,7 @@ const MobileNavbar = props => {
         <Link to="https://www.instagram.com/fidelvictorcolque/">
           <FaInstagram style={{ marginRight: "7px" }} />
         </Link>
-        <Link to="https://api.whatsapp.com/send?phone=541139504487">
+        <Link to="https://api.whatsapp.com/send?phone=543462583038">
           <FaWhatsapp style={{ marginRight: "7px" }} />
         </Link>
       </div>
