@@ -30,7 +30,7 @@ const AboutItems = props => {
       <AboutItem
         aboutItemIcon={<MdSchool />}
         aboutItemTitle={"Formación"}
-        aboutItemText={"Profesor de Baseball"}
+        aboutItemText={"Cardiólogo. Electrofisiólogo"}
       />
       <AboutItem
         aboutItemIcon={<FaBookMedical />}
@@ -44,7 +44,7 @@ const AboutItems = props => {
       <AboutItem
         aboutItemIcon={<FaClinicMedical />}
         aboutItemTitle={"Consultorio"}
-        aboutItemText={"Profesor de Baseball"}
+        aboutItemText={"Cardiólogo. Electrofisiólogo"}
       />
     </div>
   )
