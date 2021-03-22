@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import AboutItem from "./ui/AboutItem"
 
 import { FaAddressCard } from "@react-icons/all-files/fa/FaAddressCard"
@@ -50,7 +49,5 @@ const AboutItems = props => {
     </div>
   )
 }
-
-AboutItems.propTypes = {}
 
 export default AboutItems
