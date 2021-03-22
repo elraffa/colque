@@ -23,7 +23,7 @@ const AboutItems = props => {
         aboutItemTitle={"Bio"}
         aboutItemText={
           <ul>
-            <li>Profesor de yoga.</li> <li>Licenciado en magia</li>
+            <li>Cardiólogo.</li> <li>Electrofisiólogo</li>
           </ul>
         }
       />
@@ -37,7 +37,7 @@ const AboutItems = props => {
         aboutItemTitle={"Trabajos"}
         aboutItemText={
           <ul>
-            <li>Profesor de yoga.</li> <li>Licenciado en magia</li>
+            <li>Cardiólogo.</li> <li>Electrofisiólogo</li>
           </ul>
         }
       />
