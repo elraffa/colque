@@ -19,7 +19,9 @@ const MobileNavbar = props => {
       }}
     >
       <div className="social" style={{ fontSize: "2rem" }}>
-        <FaFacebook style={{ marginRight: "7px" }} />
+        <Link to="https://www.facebook.com/fidel.colque.779">
+          <FaFacebook style={{ marginRight: "7px" }} />
+        </Link>
         <Link to="https://www.instagram.com/fidelvictorcolque/">
           <FaInstagram style={{ marginRight: "7px" }} />
         </Link>

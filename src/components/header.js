@@ -2,6 +2,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import DesktopMenu from "./desktop/DesktopMenu"
 
 import Button from "../components/ui/Button"
 import MobileNavbar from "../components/ui/MobileNavbar"
@@ -60,6 +61,7 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => (
         <Button buttonContent={"Blog"} buttonLink="/page-2" />
       </div>
     </div>
+    <DesktopMenu />
   </header>
 )
 
