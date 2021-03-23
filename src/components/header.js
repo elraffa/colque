@@ -52,9 +52,10 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => (
       <h3 style={{ textAlign: "center" }}>{siteTag}</h3>
       <div
         style={{
+          marginTop: "5%",
           display: "flex",
           justifyContent: "center",
-          gap: "15px",
+          gap: "35px",
         }}
       >
         <Button buttonContent={"Blog"} buttonLink="/" />

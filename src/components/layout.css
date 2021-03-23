@@ -606,14 +606,14 @@ pre tt:after {
 
 .desktop-menu {
   margin-top: 5%;
+  background-color: #d4d4d4;
 }
 
 header ul {
   display: flex;
   justify-content: space-evenly;
-  padding: 20px 0;
+  padding: 20px 20px;
   font-size: 1.4rem;
-  background-color: #d4d4d4;
 }
 
 .social a {
