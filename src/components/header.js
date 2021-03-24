@@ -36,9 +36,9 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => (
           quality={95}
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="Fidel Colque - Cardiólogo Electrofisiólogo"
-          style={{ margin: `1.4rem auto`, borderRadius: "50%" }}
+          style={{ margin: `3em auto`, borderRadius: "50%" }}
         />
-        <h1 style={{ textAlign: "center" }}>
+        <h1 style={{ margin: "0.1em", textAlign: "center" }}>
           <Link
             to="/"
             style={{
@@ -55,10 +55,10 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => (
       <h5 style={{ textAlign: "center" }}>{siteDescription}</h5>
       <div
         style={{
-          marginTop: "5%",
+          marginTop: "13%",
           display: "flex",
           justifyContent: "center",
-          gap: "35px",
+          gap: "10%",
         }}
       >
         <Button

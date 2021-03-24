@@ -16,6 +16,10 @@ const MobileNavbar = props => {
         display: "flex",
         justifyContent: "space-between",
         fontSize: "1.6rem",
+        position: "fixed",
+        width: "100%",
+        zIndex: 10,
+        marginBottom: "1em",
       }}
     >
       <div className="social" style={{ fontSize: "2rem" }}>
