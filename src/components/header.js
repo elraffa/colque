@@ -26,6 +26,7 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => (
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
+          padding: "1em 0",
         }}
       >
         <StaticImage
@@ -35,14 +36,15 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => (
           quality={95}
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="Fidel Colque - Cardiólogo Electrofisiólogo"
-          style={{ margin: `1rem auto`, borderRadius: "50%" }}
+          style={{ margin: `1.4rem auto`, borderRadius: "50%" }}
         />
-        <h1 style={{ margin: 0, textAlign: "center" }}>
+        <h1 style={{ textAlign: "center" }}>
           <Link
             to="/"
             style={{
               color: `#7365AA`,
               textDecoration: `none`,
+              fontSize: "3rem",
             }}
           >
             {siteTitle}
@@ -50,6 +52,7 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => (
         </h1>
       </div>
       <h3 style={{ textAlign: "center" }}>{siteTag}</h3>
+      <h5 style={{ textAlign: "center" }}>{siteDescription}</h5>
       <div
         style={{
           marginTop: "5%",
