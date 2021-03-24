@@ -47,9 +47,20 @@ const Layout = ({ children }) => {
           marginTop: `2rem`,
         }}
       >
-        <Location />© {new Date().getFullYear()}, Diseño y desarrollo
-        {` `}
-        <a href="https://www.mktdigitalideas.com">MKTDigital Ideas</a>
+        <Location />
+        <div
+          style={{
+            backgroundColor: "black",
+            color: "white",
+            fontWeight: "bold",
+            textAlign: "right",
+            padding: "0.5rem",
+          }}
+        >
+          © {new Date().getFullYear()}, Diseño y desarrollo
+          {` `}
+          <a href="https://www.mktdigitalideas.com">MKTDigital Ideas</a>
+        </div>
       </footer>
     </>
   )

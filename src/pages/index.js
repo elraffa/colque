@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import AboutItems from "../components/AboutItems"
+import ArticleItems from "../components/ArticleItems"
 
 import SEO from "../components/seo"
 
@@ -14,13 +15,24 @@ const IndexPage = () => (
       style={{
         textTransform: "uppercase",
         textAlign: "center",
-        marginBottom: "2.5rem",
+        margin: "4.5rem 0",
       }}
     >
       Acerca de mí
     </h3>
 
     <AboutItems />
+
+    <h3
+      style={{
+        textTransform: "uppercase",
+        textAlign: "center",
+        margin: "4.5rem 0",
+      }}
+    >
+      Actividades
+    </h3>
+    <ArticleItems />
 
     {/* <p>
       <Link to="/page-2/">Go to page 2</Link> <br />

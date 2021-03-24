@@ -1,22 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const Button = ({ buttonContent, buttonLink }) => {
+const Button = ({ buttonContent, buttonLink, buttonClass }) => {
   return (
-    <Link
-      to={buttonLink}
-      className="button-main"
-      style={{
-        padding: `10px 60px`,
-        width: "100%",
-        color: `#fff`,
-        textDecoration: "none",
-        textAlign: "center",
-        display: `inline-block`,
-        borderRadius: `35px`,
-        fontWeight: "bold",
-      }}
-    >
+    <Link to={buttonLink} className={buttonClass}>
       {buttonContent}
     </Link>
   )

@@ -58,8 +58,16 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => (
           gap: "35px",
         }}
       >
-        <Button buttonContent={"Blog"} buttonLink="/" />
-        <Button buttonContent={"Blog"} buttonLink="/page-2" />
+        <Button
+          buttonClass={"button-main"}
+          buttonContent={"Blog"}
+          buttonLink="/"
+        />
+        <Button
+          buttonClass={"button-main"}
+          buttonContent={"Blog"}
+          buttonLink="/page-2"
+        />
       </div>
     </div>
     <DesktopMenu />
