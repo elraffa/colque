@@ -176,7 +176,7 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => {
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="Fidel Colque - Cardiólogo Electrofisiólogo"
           style={{
-            margin: `7em auto 0.1em auto`,
+            margin: `3em auto 0.1em auto`,
             borderRadius: "50%",
             border: "5px solid #7365aa",
           }}
