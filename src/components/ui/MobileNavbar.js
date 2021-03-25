@@ -1,10 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import MobileMenu from "./MobileMenu"
+
 import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook"
 import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram"
 import { FaWhatsapp } from "@react-icons/all-files/fa/FaWhatsapp"
-import { RiMenu3Fill } from "@react-icons/all-files/ri/RiMenu3Fill"
 
 const MobileNavbar = props => {
   return (
@@ -32,9 +33,6 @@ const MobileNavbar = props => {
         <Link to="https://api.whatsapp.com/send?phone=543462583038">
           <FaWhatsapp style={{ marginRight: "7px" }} />
         </Link>
-      </div>
-      <div style={{ textAlign: "right", fontSize: "2rem" }}>
-        <RiMenu3Fill />
       </div>
     </div>
   )

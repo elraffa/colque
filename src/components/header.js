@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
@@ -6,77 +7,160 @@ import DesktopMenu from "./desktop/DesktopMenu"
 
 import Button from "../components/ui/Button"
 import MobileNavbar from "../components/ui/MobileNavbar"
+import MobileMenu from "../components/ui/MobileMenu"
+import styled from "styled-components"
 
-const Header = ({ siteTitle, siteDescription, siteTag }) => (
-  <header
-    style={{
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <MobileNavbar />
-    <div
+const MenuIcon = styled.button`
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 15;
+
+  div {
+    width: 1.7rem;
+    height: 0.21rem;
+    background: white;
+    transform-origin: 1px;
+
+    :nth-child(2) {
+    }
+  }
+`
+
+const MenuLinks = styled.nav`
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: #ccc;
+  transform: ${({ nav }) => (nav ? "translateX(0)" : "translate(100%)")};
+
+  ul {
+    display: block;
+  }
+
+  li {
+    margin-top: 2rem;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 2.5rem;
+  }
+`
+
+const Header = ({ siteTitle, siteDescription, siteTag }) => {
+  const [nav, showNav] = useState(false)
+
+  return (
+    <header
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        marginBottom: `1.45rem`,
+        overflow: "hidden",
       }}
     >
+      <MobileNavbar />
+      <MenuIcon onClick={() => showNav(!nav)}>
+        <div />
+        <div />
+        <div />
+      </MenuIcon>
+
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          padding: "1em 0",
+          margin: `0 auto`,
+          maxWidth: 960,
+          padding: `1.45rem 1.0875rem`,
         }}
       >
-        <StaticImage
-          className="main-image"
-          src="../images/fidel-colque-cardiologo.jpeg"
-          width={300}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="Fidel Colque - Cardiólogo Electrofisiólogo"
-          style={{ margin: `3em auto`, borderRadius: "50%" }}
-        />
-        <h1 style={{ margin: "0.1em", textAlign: "center" }}>
-          <Link
-            to="/"
-            style={{
-              color: `#7365AA`,
-              textDecoration: `none`,
-              fontSize: "3rem",
-            }}
-          >
-            {siteTitle}
-          </Link>
-        </h1>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            padding: "1em 0",
+          }}
+        >
+          <StaticImage
+            className="main-image"
+            src="../images/fidel-colque-cardiologo.jpeg"
+            width={300}
+            quality={95}
+            formats={["AUTO", "WEBP", "AVIF"]}
+            alt="Fidel Colque - Cardiólogo Electrofisiólogo"
+            style={{ margin: `3em auto`, borderRadius: "50%" }}
+          />
+          <h1 style={{ margin: "0.1em", textAlign: "center" }}>
+            <Link
+              to="/"
+              style={{
+                color: `#7365AA`,
+                textDecoration: `none`,
+                fontSize: "3rem",
+              }}
+            >
+              {siteTitle}
+            </Link>
+          </h1>
+        </div>
+        <h3 style={{ textAlign: "center" }}>{siteTag}</h3>
+        <h5 style={{ textAlign: "center" }}>{siteDescription}</h5>
+        <div
+          className="header-buttons"
+          style={{
+            marginTop: "15%",
+            display: "flex",
+            justifyContent: "center",
+            gap: "10%",
+          }}
+        >
+          <Button
+            buttonClass={"button-main"}
+            buttonContent={"Blog"}
+            buttonLink="/"
+          />
+          <Button
+            buttonClass={"button-main"}
+            buttonContent={"Blog"}
+            buttonLink="/page-2"
+          />
+        </div>
       </div>
-      <h3 style={{ textAlign: "center" }}>{siteTag}</h3>
-      <h5 style={{ textAlign: "center" }}>{siteDescription}</h5>
-      <div
-        className="header-buttons"
-        style={{
-          marginTop: "15%",
-          display: "flex",
-          justifyContent: "center",
-          gap: "10%",
-        }}
-      >
-        <Button
-          buttonClass={"button-main"}
-          buttonContent={"Blog"}
-          buttonLink="/"
-        />
-        <Button
-          buttonClass={"button-main"}
-          buttonContent={"Blog"}
-          buttonLink="/page-2"
-        />
-      </div>
-    </div>
-    <DesktopMenu />
-  </header>
-)
+      <DesktopMenu />
+      <MenuLinks nav={nav}>
+        <ul>
+          <li>
+            <Link to="/">Bio</Link>
+          </li>
+          <li>
+            <Link to="/">Bio</Link>
+          </li>
+          <li>
+            <Link to="/">Bio</Link>
+          </li>
+          <li>
+            <Link to="/">Bio</Link>
+          </li>
+        </ul>
+      </MenuLinks>
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

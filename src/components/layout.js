@@ -8,10 +8,17 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import styled, { createGlobalStyle } from "styled-components"
 
 import Header from "./header"
 import Location from "../components/ui/Location"
 import "./layout.css"
+
+// const Global = createGlobalStyle`
+//   body {
+//     margin: 0;
+//   }
+// `
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
