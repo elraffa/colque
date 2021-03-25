@@ -11,10 +11,11 @@ import MobileMenu from "../components/ui/MobileMenu"
 import styled from "styled-components"
 
 const MenuLinks = styled.nav`
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   display: flex;
+  z-index: 9;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -26,7 +27,7 @@ const MenuLinks = styled.nav`
   background: #ccc;
   transition: transform 300ms;
   transform: ${({ nav }) => (nav ? "translateX(0)" : "translate(100%)")};
-  display: ${({ nav }) => (nav ? "block" : "hidden")};
+  display: ${({ nav }) => (nav ? "flex" : "null")};
 
   ul {
     display: block;
@@ -58,6 +59,10 @@ const MenuIcon = styled.button`
   cursor: pointer;
   z-index: 15;
 
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+
   div {
     width: 1.5rem;
     height: 0.21rem;
@@ -86,7 +91,7 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => {
     <header
       style={{
         marginBottom: `1.45rem`,
-        overflow: "hidden",
+        position: "relative",
       }}
     >
       <MobileNavbar />
