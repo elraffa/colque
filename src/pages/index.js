@@ -5,12 +5,21 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import AboutItems from "../components/AboutItems"
 import ArticleItems from "../components/ArticleItems"
+import { Helmet } from "react-helmet"
 
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+    <Helmet>
+      <meta charSet="utf-8" />
+      <meta
+        name="viewport"
+        content="width=device-width, minimum-scale=1.0"
+      ></meta>
+      <title>Fidel Colque - Cardiólogo y Electrofisiólogo</title>
+    </Helmet>
     <div className="about">
       <h3
         style={{

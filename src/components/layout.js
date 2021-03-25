@@ -9,6 +9,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled, { createGlobalStyle } from "styled-components"
+import { Helmet } from "react-helmet"
 
 import Header from "./header"
 import Location from "../components/ui/Location"
@@ -35,6 +36,14 @@ const Layout = ({ children }) => {
 
   return (
     <div className="wrapper">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, minimum-scale=1.0"
+        ></meta>
+        <title>Fidel Colque - Cardiólogo y Electrofisiólogo</title>
+      </Helmet>
       <Header
         siteTitle={data.site.siteMetadata?.title || `Title`}
         siteDescription={data.site.siteMetadata?.description}

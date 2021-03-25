@@ -26,13 +26,14 @@ const MenuLinks = styled.nav`
   background: #ccc;
   transition: transform 300ms;
   transform: ${({ nav }) => (nav ? "translateX(0)" : "translate(100%)")};
+  display: ${({ nav }) => (nav ? "block" : "hidden")};
 
   ul {
     display: block;
   }
 
   li {
-    margin-top: 3rem;
+    margin-top: 2.3rem;
   }
 
   a {
@@ -165,7 +166,7 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => {
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="Fidel Colque - Cardiólogo Electrofisiólogo"
           style={{
-            margin: `0.2em auto`,
+            margin: `7em auto 0.1em auto`,
             borderRadius: "50%",
             border: "5px solid #7365aa",
           }}
