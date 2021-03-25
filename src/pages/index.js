@@ -11,17 +11,19 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h3
-      style={{
-        textTransform: "uppercase",
-        textAlign: "center",
-        margin: "4.5rem 0",
-      }}
-    >
-      Acerca de mí
-    </h3>
+    <div className="about">
+      <h3
+        style={{
+          textTransform: "uppercase",
+          textAlign: "center",
+          margin: "4.5rem 0",
+        }}
+      >
+        Acerca de mí
+      </h3>
 
-    <AboutItems />
+      <AboutItems />
+    </div>
 
     <h3
       style={{

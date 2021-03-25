@@ -636,6 +636,7 @@ header ul {
   justify-content: space-evenly;
   padding: 20px 20px;
   font-size: 1.4rem;
+  margin: 0;
 }
 
 .social a {
@@ -683,9 +684,18 @@ header ul {
 
   .main-image {
     width: 30% !important;
+    margin: 1.8em auto !important;
+  }
+
+  .header-buttons {
+    margin-top: 4% !important;
   }
 
   .button-main {
     width: 30% !important;
+  }
+
+  .desktop-menu {
+    margin-top: 2% !important;
   }
 }

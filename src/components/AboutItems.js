@@ -8,44 +8,46 @@ import { FaClinicMedical } from "react-icons/fa"
 
 const AboutItems = props => {
   return (
-    <div
-      className="about-items"
-      style={{
-        margin: 0,
-        display: "grid",
-        gridTemplateColumns: "repeat(2, 2fr)",
-        gridGap: "55px",
-        justifyItems: "center",
-      }}
-    >
-      <AboutItem
-        aboutItemIcon={<FaAddressCard />}
-        aboutItemTitle={"Bio"}
-        aboutItemText={
-          <ul>
-            <li>Cardiólogo.</li> <li>Electrofisiólogo</li>
-          </ul>
-        }
-      />
-      <AboutItem
-        aboutItemIcon={<MdSchool />}
-        aboutItemTitle={"Formación"}
-        aboutItemText={"Cardiólogo. Electrofisiólogo"}
-      />
-      <AboutItem
-        aboutItemIcon={<FaBookMedical />}
-        aboutItemTitle={"Trabajos"}
-        aboutItemText={
-          <ul>
-            <li>Cardiólogo.</li> <li>Electrofisiólogo</li>
-          </ul>
-        }
-      />
-      <AboutItem
-        aboutItemIcon={<FaClinicMedical />}
-        aboutItemTitle={"Consultorio"}
-        aboutItemText={"Cardiólogo. Electrofisiólogo"}
-      />
+    <div style={{ backgroundColor: "#cab8ff", padding: "3em" }}>
+      <div
+        className="about-items"
+        style={{
+          margin: 0,
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 2fr)",
+          gridGap: "55px",
+          justifyItems: "center",
+        }}
+      >
+        <AboutItem
+          aboutItemIcon={<FaAddressCard />}
+          aboutItemTitle={"Bio"}
+          aboutItemText={
+            <ul>
+              <li>Cardiólogo.</li> <li>Electrofisiólogo</li>
+            </ul>
+          }
+        />
+        <AboutItem
+          aboutItemIcon={<MdSchool />}
+          aboutItemTitle={"Formación"}
+          aboutItemText={"Cardiólogo. Electrofisiólogo"}
+        />
+        <AboutItem
+          aboutItemIcon={<FaBookMedical />}
+          aboutItemTitle={"Trabajos"}
+          aboutItemText={
+            <ul>
+              <li>Cardiólogo.</li> <li>Electrofisiólogo</li>
+            </ul>
+          }
+        />
+        <AboutItem
+          aboutItemIcon={<FaClinicMedical />}
+          aboutItemTitle={"Consultorio"}
+          aboutItemText={"Cardiólogo. Electrofisiólogo"}
+        />
+      </div>
     </div>
   )
 }

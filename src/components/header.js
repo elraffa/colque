@@ -54,8 +54,9 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => (
       <h3 style={{ textAlign: "center" }}>{siteTag}</h3>
       <h5 style={{ textAlign: "center" }}>{siteDescription}</h5>
       <div
+        className="header-buttons"
         style={{
-          marginTop: "13%",
+          marginTop: "15%",
           display: "flex",
           justifyContent: "center",
           gap: "10%",
