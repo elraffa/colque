@@ -168,37 +168,44 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => {
       </div>
       <DesktopMenu />
       <MenuLinks nav={nav}>
-        <StaticImage
-          className="main-image"
-          src="../images/fidel-colque-cardiologo.jpeg"
-          width={200}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="Fidel Colque - Cardiólogo Electrofisiólogo"
-          style={{
-            margin: `3em auto 0.1em auto`,
-            borderRadius: "50%",
-            border: "5px solid #7365aa",
-          }}
-        />
+        <Link
+          style={{ margin: 0 }}
+          to="/"
+          nav={nav}
+          onClick={() => showNav(!nav)}
+        >
+          <StaticImage
+            className="main-image"
+            src="../images/fidel-colque-cardiologo.jpeg"
+            width={200}
+            quality={95}
+            formats={["AUTO", "WEBP", "AVIF"]}
+            alt="Fidel Colque - Cardiólogo Electrofisiólogo"
+            style={{
+              margin: `1em auto 0.1em auto`,
+              borderRadius: "50%",
+              border: "5px solid #7365aa",
+            }}
+          />
+        </Link>
         <ul>
-          <li>
+          <li nav={nav} onClick={() => showNav(!nav)}>
             <Link to="#about">
               <FaHeartbeat /> Acerca de mí
             </Link>
           </li>
-          <li>
-            <Link to="/">
+          <li nav={nav} onClick={() => showNav(!nav)}>
+            <Link to="#activities">
               <FaRegNewspaper /> Actividades
             </Link>
           </li>
-          <li>
+          <li nav={nav} onClick={() => showNav(!nav)}>
             <Link to="/">
               <MdPeople /> Comunidad
             </Link>
           </li>
-          <li>
-            <Link to="/">
+          <li nav={nav} onClick={() => showNav(!nav)}>
+            <Link to="#location">
               <FaClinicMedical /> Consultorio
             </Link>
           </li>

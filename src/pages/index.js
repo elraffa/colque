@@ -20,21 +20,22 @@ const IndexPage = () => (
       ></meta>
       <title>Fidel Colque - Cardiólogo y Electrofisiólogo</title>
     </Helmet>
-    <div className="about">
-      <h3
-        style={{
-          textTransform: "uppercase",
-          textAlign: "center",
-          margin: "4.5rem 0",
-        }}
-      >
-        Acerca de mí
-      </h3>
-
-      <AboutItems />
-    </div>
 
     <h3
+      id="about"
+      style={{
+        textTransform: "uppercase",
+        textAlign: "center",
+        margin: "4.5rem 0",
+      }}
+    >
+      Acerca de mí
+    </h3>
+
+    <AboutItems />
+
+    <h3
+      id="activities"
       style={{
         textTransform: "uppercase",
         textAlign: "center",
