@@ -10,6 +10,11 @@ import MobileNavbar from "../components/ui/MobileNavbar"
 import MobileMenu from "../components/ui/MobileMenu"
 import styled from "styled-components"
 
+import { FaHeartbeat } from "react-icons/fa"
+import { FaRegNewspaper } from "react-icons/fa"
+import { FaClinicMedical } from "react-icons/fa"
+import { MdPeople } from "react-icons/md"
+
 const MenuLinks = styled.nav`
   position: fixed;
   top: 0;
@@ -178,16 +183,24 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => {
         />
         <ul>
           <li>
-            <Link to="#about">Acerca de mí</Link>
+            <Link to="#about">
+              <FaHeartbeat /> Acerca de mí
+            </Link>
           </li>
           <li>
-            <Link to="/">Actividades</Link>
+            <Link to="/">
+              <FaRegNewspaper /> Actividades
+            </Link>
           </li>
           <li>
-            <Link to="/">Comunidad</Link>
+            <Link to="/">
+              <MdPeople /> Comunidad
+            </Link>
           </li>
           <li>
-            <Link to="/">Consultorio</Link>
+            <Link to="/">
+              <FaClinicMedical /> Consultorio
+            </Link>
           </li>
         </ul>
       </MenuLinks>
