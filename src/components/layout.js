@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div className="wrapper">
       <Header
         siteTitle={data.site.siteMetadata?.title || `Title`}
         siteDescription={data.site.siteMetadata?.description}
@@ -69,7 +69,7 @@ const Layout = ({ children }) => {
           <a href="https://www.mktdigitalideas.com">MKTDigital Ideas</a>
         </div>
       </footer>
-    </>
+    </div>
   )
 }
 
