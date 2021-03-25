@@ -1,5 +1,10 @@
 @import url("https://use.typekit.net/vrv4wnf.css");
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -601,6 +606,10 @@ pre tt:after {
 }
 
 /* My Styles */
+
+#gatsby-focus-wrapper {
+  overflow-x: hidden;
+}
 
 .button,
 .button-main {
