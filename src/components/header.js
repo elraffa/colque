@@ -10,6 +10,39 @@ import MobileNavbar from "../components/ui/MobileNavbar"
 import MobileMenu from "../components/ui/MobileMenu"
 import styled from "styled-components"
 
+const MenuLinks = styled.nav`
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.94;
+  overflow: hidden;
+  background: #ccc;
+  transition: transform 300ms;
+  transform: ${({ nav }) => (nav ? "translateX(0)" : "translate(100%)")};
+
+  ul {
+    display: block;
+  }
+
+  li {
+    margin-top: 3rem;
+  }
+
+  a {
+    color: #7365aa;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+`
+
 const MenuIcon = styled.button`
   position: fixed;
   top: 1rem;
@@ -25,42 +58,23 @@ const MenuIcon = styled.button`
   z-index: 15;
 
   div {
-    width: 1.7rem;
+    width: 1.5rem;
     height: 0.21rem;
     background: white;
     transform-origin: 1px;
+    transition: transform 300ms, opacity 300ms;
+
+    :first-child {
+      transform: ${({ nav }) => (nav ? "rotate(45deg)" : "rotate(0)")};
+    }
 
     :nth-child(2) {
+      opacity: ${({ nav }) => (nav ? "0" : "1")};
     }
-  }
-`
 
-const MenuLinks = styled.nav`
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  background: #ccc;
-  transform: ${({ nav }) => (nav ? "translateX(0)" : "translate(100%)")};
-
-  ul {
-    display: block;
-  }
-
-  li {
-    margin-top: 2rem;
-  }
-
-  a {
-    text-decoration: none;
-    font-size: 2.5rem;
+    :nth-child(3) {
+      transform: ${({ nav }) => (nav ? "rotate(-45deg)" : "rotate(0)")};
+    }
   }
 `
 
@@ -75,7 +89,7 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => {
       }}
     >
       <MobileNavbar />
-      <MenuIcon onClick={() => showNav(!nav)}>
+      <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
         <div />
         <div />
         <div />
@@ -143,18 +157,31 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => {
       </div>
       <DesktopMenu />
       <MenuLinks nav={nav}>
+        <StaticImage
+          className="main-image"
+          src="../images/fidel-colque-cardiologo.jpeg"
+          width={200}
+          quality={95}
+          formats={["AUTO", "WEBP", "AVIF"]}
+          alt="Fidel Colque - Cardiólogo Electrofisiólogo"
+          style={{
+            margin: `0.2em auto`,
+            borderRadius: "50%",
+            border: "5px solid #7365aa",
+          }}
+        />
         <ul>
           <li>
-            <Link to="/">Bio</Link>
+            <Link to="#about">Acerca de mí</Link>
           </li>
           <li>
-            <Link to="/">Bio</Link>
+            <Link to="/">Actividades</Link>
           </li>
           <li>
-            <Link to="/">Bio</Link>
+            <Link to="/">Comunidad</Link>
           </li>
           <li>
-            <Link to="/">Bio</Link>
+            <Link to="/">Consultorio</Link>
           </li>
         </ul>
       </MenuLinks>
