@@ -8,8 +8,19 @@ import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram"
 import { FaWhatsapp } from "@react-icons/all-files/fa/FaWhatsapp"
 
 const TopMenuLinks = styled.div`
-  color: white;
   text-transform: uppercase;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-right: 1rem;
+    font-weight: 700;
+  }
+
+  @media only screen and (max-width: 736px) {
+    display: none;
+  }
 `
 
 const MobileNavbar = props => {
@@ -40,16 +51,12 @@ const MobileNavbar = props => {
         </Link>
       </div>
       <TopMenuLinks>
-        <Link to="https://www.facebook.com/fidel.colque.779">Acerca de mí</Link>
-        <Link to="https://www.instagram.com/fidelvictorcolque/">
-          Actividades
-        </Link>
+        <Link to="#about">Acerca de mí</Link>
+        <Link to="#activities">Actividades</Link>
         <Link to="https://api.whatsapp.com/send?phone=543462583038">
           Comunidad
         </Link>
-        <Link to="https://api.whatsapp.com/send?phone=543462583038">
-          Consultorio
-        </Link>
+        <Link to="#location">Consultorio</Link>
       </TopMenuLinks>
     </div>
   )
