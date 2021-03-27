@@ -1,10 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import styled from "styled-components"
 
 import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook"
 import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram"
 import { FaWhatsapp } from "@react-icons/all-files/fa/FaWhatsapp"
+
+const TopMenuLinks = styled.div`
+  color: white;
+  text-transform: uppercase;
+`
 
 const MobileNavbar = props => {
   return (
@@ -33,6 +39,18 @@ const MobileNavbar = props => {
           <FaWhatsapp style={{ marginRight: "7px" }} />
         </Link>
       </div>
+      <TopMenuLinks>
+        <Link to="https://www.facebook.com/fidel.colque.779">Acerca de mí</Link>
+        <Link to="https://www.instagram.com/fidelvictorcolque/">
+          Actividades
+        </Link>
+        <Link to="https://api.whatsapp.com/send?phone=543462583038">
+          Comunidad
+        </Link>
+        <Link to="https://api.whatsapp.com/send?phone=543462583038">
+          Consultorio
+        </Link>
+      </TopMenuLinks>
     </div>
   )
 }
