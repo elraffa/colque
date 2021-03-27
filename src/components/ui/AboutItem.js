@@ -10,10 +10,9 @@ const Item = styled.div`
   gap: 2rem;
   justify-content: center;
   padding: 2rem;
-
   border-radius: 11px;
-  background: #f3f1e6;
-  box-shadow: 11px 11px 23px #c5c3ba, -11px -11px 23px #ffffff;
+  background: rgb(243, 241, 230);
+  box-shadow: 7px 7px 10px #e2e3e2, -7px -7px 10px #ffffff;
 `
 
 const AboutItem = ({ aboutItemIcon, aboutItemTitle, aboutItemText }) => {

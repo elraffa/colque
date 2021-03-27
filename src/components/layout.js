@@ -69,14 +69,22 @@ const Layout = ({ children }) => {
           style={{
             backgroundColor: "black",
             color: "white",
-            fontWeight: "bold",
             textAlign: "right",
             padding: "0.5rem",
           }}
         >
           © {new Date().getFullYear()}, Diseño y desarrollo
           {` `}
-          <a href="https://www.mktdigitalideas.com">MKTDigital Ideas</a>
+          <a
+            style={{
+              color: "white",
+              fontWeight: "700",
+              textDecoration: "none",
+            }}
+            href="https://www.mktdigitalideas.com"
+          >
+            MKTDigital Ideas
+          </a>
         </div>
       </footer>
     </div>

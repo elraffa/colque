@@ -13,7 +13,7 @@ import SEO from "../components/seo"
 const SectionHeading = styled.h3`
   text-transform: uppercase;
   text-align: center;
-  margin: 4.5rem 0;
+  margin: 4.5rem 0 1rem 0;
   padding-bottom: 2rem;
   border-bottom: 1px solid #ccc;
   scroll-margin-top: 3.5em;
