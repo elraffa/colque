@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import AboutItems from "../components/AboutItems"
@@ -8,6 +9,15 @@ import ArticleItems from "../components/ArticleItems"
 import { Helmet } from "react-helmet"
 
 import SEO from "../components/seo"
+
+const SectionHeading = styled.h3`
+  text-transform: uppercase;
+  text-align: center;
+  margin: 4.5rem 0;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
+  scroll-margin-top: 3.5em;
+`
 
 const IndexPage = () => (
   <Layout>
@@ -21,29 +31,11 @@ const IndexPage = () => (
       <title>Fidel Colque - Cardiólogo y Electrofisiólogo</title>
     </Helmet>
 
-    <h3
-      id="about"
-      style={{
-        textTransform: "uppercase",
-        textAlign: "center",
-        margin: "4.5rem 0",
-      }}
-    >
-      Acerca de mí
-    </h3>
+    <SectionHeading id="about">Acerca de mí</SectionHeading>
 
     <AboutItems />
 
-    <h3
-      id="activities"
-      style={{
-        textTransform: "uppercase",
-        textAlign: "center",
-        margin: "4.5rem 0",
-      }}
-    >
-      Actividades
-    </h3>
+    <SectionHeading id="activities">Actividades</SectionHeading>
     <ArticleItems />
 
     {/* <p>

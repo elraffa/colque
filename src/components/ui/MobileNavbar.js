@@ -25,7 +25,8 @@ const TopMenuLinks = styled.div`
     :hover {
       border-radius: 5px;
       background-color: #605691;
-      box-shadow: 6px 6px 12px #6b5e9e, -6px -6px 12px #7b6cb6;
+      box-shadow: 3px 3px 6px #6b5e9e, -3px -3px 6px #7b6cb6;
+      transition: background-color 500ms;
     }
   }
 

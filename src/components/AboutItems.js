@@ -8,15 +8,14 @@ import { FaClinicMedical } from "react-icons/fa"
 
 const AboutItems = props => {
   return (
-    <div style={{ backgroundColor: "#cab8ff", padding: "3em" }}>
+    <div style={{ padding: "3em" }}>
       <div
         className="about-items"
         style={{
           margin: 0,
           display: "grid",
           gridTemplateColumns: "repeat(2, 2fr)",
-          gridGap: "55px",
-          justifyItems: "center",
+          gridGap: "2rem",
         }}
       >
         <AboutItem
