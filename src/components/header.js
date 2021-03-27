@@ -118,7 +118,7 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            padding: "1em 0",
+            padding: "3em 0",
           }}
         >
           <StaticImage
@@ -155,18 +155,18 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => {
           }}
         >
           <Button
-            buttonClass={"button-main"}
+            buttonClass={"button-neu"}
             buttonContent={"Blog"}
             buttonLink="/"
           />
           <Button
-            buttonClass={"button-main"}
+            buttonClass={"button-neu"}
             buttonContent={"Blog"}
             buttonLink="/page-2"
           />
         </div>
       </div>
-      <DesktopMenu />
+      {/* <DesktopMenu /> */}
       <MenuLinks nav={nav}>
         <Link
           style={{ margin: 0 }}
