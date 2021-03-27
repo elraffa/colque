@@ -607,6 +607,10 @@ pre tt:after {
 
 /* My Styles */
 
+.main-image {
+  box-shadow: 6px 6px 12px #d9d9d9, -6px -6px 12px #ffffff;
+}
+
 #gatsby-focus-wrapper {
   overflow-x: hidden;
 }
@@ -653,6 +657,10 @@ pre tt:after {
   border-radius: 29px;
   background: linear-gradient(145deg, #605691, #7365aa);
   box-shadow: 6px 6px 12px #d9d9d9, -6px -6px 12px #ffffff;
+}
+
+.button-neu:hover {
+  background: linear-gradient(145deg, #3c365c, #53497a);
 }
 
 .desktop-menu {

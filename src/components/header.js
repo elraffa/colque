@@ -45,7 +45,7 @@ const MenuLinks = styled.nav`
   a {
     color: #7365aa;
     text-decoration: none;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
   }
 `

@@ -6,6 +6,10 @@ import styled from "styled-components"
 import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook"
 import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram"
 import { FaWhatsapp } from "@react-icons/all-files/fa/FaWhatsapp"
+import { FaHeartbeat } from "react-icons/fa"
+import { FaRegNewspaper } from "react-icons/fa"
+import { FaClinicMedical } from "react-icons/fa"
+import { MdPeople } from "react-icons/md"
 
 const TopMenuLinks = styled.div`
   text-transform: uppercase;
@@ -16,6 +20,13 @@ const TopMenuLinks = styled.div`
     font-size: 1rem;
     margin-right: 1rem;
     font-weight: 700;
+    padding: 0.5rem;
+
+    :hover {
+      border-radius: 5px;
+      background-color: #605691;
+      box-shadow: 6px 6px 12px #6b5e9e, -6px -6px 12px #7b6cb6;
+    }
   }
 
   @media only screen and (max-width: 736px) {
@@ -28,6 +39,7 @@ const MobileNavbar = props => {
     <div
       style={{
         backgroundColor: `#7365aa`,
+        boxShadow: "6px 6px 12px #d9d9d9, -6px -6px 12px #ffffff",
         padding: "10px 13px",
         color: "#fff",
         display: "flex",
@@ -51,12 +63,18 @@ const MobileNavbar = props => {
         </Link>
       </div>
       <TopMenuLinks>
-        <Link to="#about">Acerca de mí</Link>
-        <Link to="#activities">Actividades</Link>
-        <Link to="https://api.whatsapp.com/send?phone=543462583038">
-          Comunidad
+        <Link to="#about">
+          <FaHeartbeat /> Acerca de mí
         </Link>
-        <Link to="#location">Consultorio</Link>
+        <Link to="#activities">
+          <FaRegNewspaper /> Actividades
+        </Link>
+        <Link to="https://api.whatsapp.com/send?phone=543462583038">
+          <MdPeople /> Comunidad
+        </Link>
+        <Link to="#location">
+          <FaClinicMedical /> Consultorio
+        </Link>
       </TopMenuLinks>
     </div>
   )
