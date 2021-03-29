@@ -156,7 +156,7 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => {
         >
           <Button
             buttonClass={"button-neu"}
-            buttonContent={"Blog"}
+            buttonContent={"Contacto"}
             buttonLink="/"
           />
           <Button

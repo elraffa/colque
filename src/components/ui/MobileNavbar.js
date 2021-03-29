@@ -6,6 +6,7 @@ import styled from "styled-components"
 import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook"
 import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram"
 import { FaWhatsapp } from "@react-icons/all-files/fa/FaWhatsapp"
+import { FaHome } from "@react-icons/all-files/fa/FaHome"
 import { FaHeartbeat } from "react-icons/fa"
 import { FaRegNewspaper } from "react-icons/fa"
 import { FaClinicMedical } from "react-icons/fa"
@@ -53,6 +54,9 @@ const MobileNavbar = props => {
       }}
     >
       <div className="social" style={{ fontSize: "2rem" }}>
+        <Link to="/">
+          <FaHome style={{ marginRight: "7px" }} />
+        </Link>
         <Link to="https://www.facebook.com/fidel.colque.779">
           <FaFacebook style={{ marginRight: "7px" }} />
         </Link>
