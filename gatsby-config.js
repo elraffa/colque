@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Dr. Fidel Colque`,
     tag: `Cardiólogo - Electrofisiólogo`,
-    description: `Cardiólogo y Electrofisiólogo UBA de Venado Tuerto`,
+    description: `Venado Tuerto, Santa Fe`,
     author: `@gatsbyjs`,
   },
   plugins: [
