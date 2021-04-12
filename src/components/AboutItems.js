@@ -30,8 +30,8 @@ const AboutItems = props => {
                 fútbol y el running.{" "}
               </p>
               <p>
-                Me interesa el trabajo social y estar en contacto con la
-                comunidad. Humildad, magia.
+                Me interesa el trabajar con contacto con la comunidad y apoyar
+                causas humanitarias y sociales.
               </p>
             </>
           }

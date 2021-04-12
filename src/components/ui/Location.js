@@ -14,8 +14,13 @@ const Location = props => {
     >
       <div>
         <h2>Ubicación</h2>
-        <p>Mitre 1781, Venado Tuerto</p>
-        <p>Santa Fe</p>
+        <p>Mitre 1781, Venado Tuerto, Santa Fe</p>
+        <p>
+          <strong>Celular:</strong> +54 3462 583038{" "}
+        </p>
+        <p>
+          <strong>Email:</strong> fidelvictorcolque@gmail.com{" "}
+        </p>
       </div>
       <div className="map">
         <iframe
