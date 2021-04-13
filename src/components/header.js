@@ -157,12 +157,12 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => {
           <Button
             buttonClass={"button-neu"}
             buttonContent={"Contacto"}
-            buttonLink="/"
+            buttonLink="#location"
           />
           <Button
             buttonClass={"button-neu"}
             buttonContent={"Blog"}
-            buttonLink="/page-2"
+            buttonLink="#activities"
           />
         </div>
       </div>

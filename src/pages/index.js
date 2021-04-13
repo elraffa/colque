@@ -2,11 +2,12 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
+import { Helmet } from "react-helmet"
 
 import Layout from "../components/layout"
 import AboutItems from "../components/AboutItems"
 import ArticleItems from "../components/ArticleItems"
-import { Helmet } from "react-helmet"
+import ImageGrid from "../components/imageGrid/ImageGrid"
 
 import SEO from "../components/seo"
 

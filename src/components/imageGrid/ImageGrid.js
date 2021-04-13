@@ -17,7 +17,13 @@ const ImageGrid = props => {
     }
   `
 
-  return <div>{data.allFile.edges.map()}</div>
+  return (
+    <div>
+      {data.allFile.edges.map(img => {
+        ;<img src="img" />
+      })}
+    </div>
+  )
 }
 
 ImageGrid.propTypes = {}

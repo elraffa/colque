@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { StaticImage } from "gatsby-plugin-image"
 import Button from "../ui/Button"
 
-const ArticleItem = props => {
+const ArticleItemOne = props => {
   return (
     <div
       style={{
@@ -18,7 +18,7 @@ const ArticleItem = props => {
     >
       <div>
         <StaticImage
-          src="../../images/fidel-colque-tv.png"
+          src="../../images/reunion-sadec-litoral.jpeg"
           width={500}
           quality={95}
           formats={["AUTO", "WEBP", "AVIF"]}
@@ -26,11 +26,11 @@ const ArticleItem = props => {
         />
       </div>
       <div>
-        <h2>Fidel Colque en TV</h2>
+        <h2>Reunión SADEC Litoral</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus
-          repellat corrupti, natus animi fugiat expedita saepe ea? Nemo,
-          quisquam sint.
+          Participé de la Reunión de la Filial Litoral de SADEC: Estimulación
+          del Sitema de Conducción y Experiencias Locales, a cargo del Dr.
+          Horacio Quiroga Ponce.
         </p>
         <Button
           buttonContent={"Leer más"}
@@ -42,6 +42,6 @@ const ArticleItem = props => {
   )
 }
 
-ArticleItem.propTypes = {}
+ArticleItemOne.propTypes = {}
 
-export default ArticleItem
+export default ArticleItemOne
