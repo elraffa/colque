@@ -38,6 +38,8 @@ const IndexPage = () => (
 
     <SectionHeading id="activities">Actividades</SectionHeading>
     <ArticleItems />
+    <SectionHeading id="multimedia">Multimedia</SectionHeading>
+    <ImageGrid />
 
     {/* <p>
       <Link to="/page-2/">Go to page 2</Link> <br />
