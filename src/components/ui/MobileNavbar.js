@@ -74,7 +74,7 @@ const MobileNavbar = props => {
         <Link to="#activities">
           <FaRegNewspaper /> Actividades
         </Link>
-        <Link to="https://api.whatsapp.com/send?phone=543462583038">
+        <Link to="/">
           <MdPeople /> Comunidad
         </Link>
         <Link to="#location">

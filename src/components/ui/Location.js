@@ -1,5 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { FaWhatsapp } from "@react-icons/all-files/fa/FaWhatsapp"
+import { FaRegEnvelope } from "@react-icons/all-files/fa/FaRegEnvelope"
 
 const Location = props => {
   return (
@@ -17,9 +19,21 @@ const Location = props => {
         <p>Mitre 1781, Venado Tuerto, Santa Fe</p>
         <p>
           <strong>Celular:</strong> +54 3462 583038{" "}
+          <a
+            style={{ color: "#7365AA" }}
+            href="https://api.whatsapp.com/send?phone=543462583038/"
+          >
+            <FaWhatsapp />
+          </a>
         </p>
         <p>
           <strong>Email:</strong> fidelvictorcolque@gmail.com{" "}
+          <a
+            style={{ color: "#7365AA" }}
+            href="mailto:fidelvictorcolque@gmail.com?subject:Consulta"
+          >
+            <FaRegEnvelope />
+          </a>{" "}
         </p>
       </div>
       <div className="map">
