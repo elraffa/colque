@@ -64,9 +64,38 @@ const AboutItems = props => {
           aboutItemIcon={<FaBookMedical />}
           aboutItemTitle={"Trabajos"}
           aboutItemText={
-            <ul>
-              <li>Cardiólogo.</li> <li>Electrofisiólogo</li>
-            </ul>
+            <>
+              <p>
+                CDI: Causas y Tiempo a la muerte. Fundación Favaloro. Temas
+                Libres “ Trastorno del Ritmo, Muerte Súbita, Electrofisiología”
+                FAC 2016-101
+              </p>
+
+              <p>
+                CDI: Tiempo a la primer terapia adecuada. Fundación Favaloro.
+                Temas Libres “ Trastorno del Ritmo, Muerte Súbita,
+                Electrofisiología” FAC 2016-90
+              </p>
+
+              <p>
+                Dispositivos con Monitoreo Remoto. Seguimiento. Fundación
+                Favaloro. Temas Libres “ Trastorno del Ritmo, Muerte Súbita,
+                Electrofisiología” FAC 2016-107
+              </p>
+
+              <p>
+                5to Congreso de Arritmias Monitoreo Remoto en dispositivo
+                eléctricos implantables: Seguridad y Eficacia del monitoreo
+                diario en un seguimiento a largo plazo. Año 2015
+              </p>
+
+              <p>
+                5to Congreso de Arritmias “ Valor del Monitoreo Remoto en la
+                Detección Precoz de Bajo Porcentaje de Estimulación
+                Biventricular en Paciente con Resincronizadores Cardíacos”. Año
+                2015
+              </p>
+            </>
           }
         />
         <AboutItem

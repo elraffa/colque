@@ -38,7 +38,7 @@ const IndexPage = () => (
 
     <SectionHeading id="activities">Actividades</SectionHeading>
     <ArticleItems />
-    <SectionHeading id="multimedia">Multimedia</SectionHeading>
+    <SectionHeading id="multimedia">Imágenes</SectionHeading>
     <ImageGrid />
 
     {/* <p>

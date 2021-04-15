@@ -26,11 +26,10 @@ const ArticleItemTwo = props => {
         />
       </div>
       <div>
-        <h2>Fidel Colque en TV</h2>
+        <h2>Fidel Colque en MagaZine TV</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus
-          repellat corrupti, natus animi fugiat expedita saepe ea? Nemo,
-          quisquam sint.
+          Participé en MagaZineTV hablando sobre Deporte y Arritmias y la
+          situación actual del COVID y Arritmias.
         </p>
         <Button
           buttonContent={"Leer más"}
