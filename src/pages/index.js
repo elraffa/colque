@@ -1,8 +1,7 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { Helmet } from "react-helmet"
+import image from "../images/colque-icon.png"
 
 import Layout from "../components/layout"
 import AboutItems from "../components/AboutItems"
@@ -22,7 +21,7 @@ const SectionHeading = styled.h3`
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Inicio" image={image} />
     <Helmet>
       <meta charSet="utf-8" />
       <meta
