@@ -32,11 +32,11 @@ const ArticleItemOne = props => {
           del Sitema de Conducción y Experiencias Locales, a cargo del Dr.
           Horacio Quiroga Ponce.
         </p>
-        <Button
+        {/* <Button
           buttonContent={"Leer más"}
           buttonLink="/"
           buttonClass={"button"}
-        />
+        /> */}
       </div>
     </div>
   )

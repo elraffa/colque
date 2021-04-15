@@ -31,11 +31,11 @@ const ArticleItemTwo = props => {
           Participé en MagaZineTV hablando sobre Deporte y Arritmias y la
           situación actual del COVID y Arritmias.
         </p>
-        <Button
+        {/* <Button
           buttonContent={"Leer más"}
           buttonLink="/"
           buttonClass={"button"}
-        />
+        /> */}
       </div>
     </div>
   )

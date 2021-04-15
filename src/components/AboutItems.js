@@ -1,5 +1,7 @@
 import React from "react"
 import AboutItem from "./ui/AboutItem"
+import Button from "../components/ui/Button"
+import CV from "../images/Fidel-Colque_CV.pdf"
 
 import { FaAddressCard } from "@react-icons/all-files/fa/FaAddressCard"
 import { MdSchool } from "react-icons/md"
@@ -33,6 +35,11 @@ const AboutItems = props => {
                 Me interesa el trabajar con contacto con la comunidad y apoyar
                 causas humanitarias y sociales.
               </p>
+              <Button
+                buttonContent={"Curriculum Vitae"}
+                buttonLink={CV}
+                buttonClass={"button"}
+              />
             </>
           }
         />
