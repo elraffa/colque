@@ -29,6 +29,10 @@ const IndexPage = () => (
         content="width=device-width, minimum-scale=1.0"
       ></meta>
       <title>Fidel Colque - Cardiólogo y Electrofisiólogo</title>
+      <meta
+        name="google-site-verification"
+        content="RpR99Xtp1x6NaEkXXy3UZWTQZ_6yu91ggzbeohxJxJ4"
+      />
     </Helmet>
 
     <SectionHeading id="about">Acerca de mí</SectionHeading>
