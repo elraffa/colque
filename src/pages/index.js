@@ -6,7 +6,7 @@ import image from "../images/colque-icon.png"
 import Layout from "../components/layout"
 import AboutItems from "../components/AboutItems"
 import ArticleItems from "../components/ArticleItems"
-import ImageGrid from "../components/imageGrid/ImageGrid"
+//import ImageGrid from "../components/imageGrid/ImageGrid"
 
 import SEO from "../components/seo"
 
@@ -42,7 +42,7 @@ const IndexPage = () => (
     <SectionHeading id="activities">Actividades</SectionHeading>
     <ArticleItems />
     <SectionHeading id="multimedia">Imágenes</SectionHeading>
-    <ImageGrid />
+    {/* <ImageGrid /> */}
 
     {/* <p>
       <Link to="/page-2/">Go to page 2</Link> <br />
