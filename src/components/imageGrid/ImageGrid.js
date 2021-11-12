@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const Grid = styled.div`
   display: grid;
@@ -33,34 +34,46 @@ const Grid = styled.div`
   }
 `
 
-const useGallery = () => {
+// const data = useStaticQuery(graphql`
+//   query MyQuery {
+//     allFile(filter: { relativeDirectory: { eq: "grid" } }) {
+//       nodes {
+//         id
+//         childImageSharp {
+//           fluid {
+//             ...GatsbyImageSharpFluid
+//           }
+//         }
+//       }
+//     }
+//   }
+// `)
+
+// return data.allFile.edges.map(node => ({
+//   ...node.childImageSharp, // Note that we're spreading the childImageSharp object here
+//   id: node.id,
+// }))
+
+const ImageGrid = props => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query {
       allFile(filter: { relativeDirectory: { eq: "grid" } }) {
-        nodes {
-          id
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
+        edges {
+          node {
+            id
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED)
             }
           }
         }
       }
     }
   `)
-
-  return data.allFile.nodes.map(node => ({
-    ...node.childImageSharp, // Note that we're spreading the childImageSharp object here
-    id: node.id,
-  }))
-}
-
-const ImageGrid = props => {
-  const images = useGallery()
+  console.log(`this da log: ${data}`)
   return (
     <Grid>
-      {images.map(({ id, fluid }) => (
-        <Img key={id} fluid={fluid} />
+      {data.allFile.edges.map(({ id, node }) => (
+        <GatsbyImage key={id} alt="image" image={node.childImageSharp.gatsbyImageData} />
       ))}
     </Grid>
   )

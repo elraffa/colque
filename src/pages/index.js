@@ -2,6 +2,8 @@ import * as React from "react"
 import styled from "styled-components"
 import { Helmet } from "react-helmet"
 import image from "../images/colque-icon.png"
+import { GatsbyImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import AboutItems from "../components/AboutItems"
@@ -19,7 +21,10 @@ const SectionHeading = styled.h3`
   scroll-margin-top: 3.5em;
 `
 
-const IndexPage = () => (
+const IndexPage = () => {
+
+
+  return (
   <Layout>
     <SEO title="Inicio" image={image} />
     <Helmet>
@@ -49,6 +54,6 @@ const IndexPage = () => (
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
     </p> */}
   </Layout>
-)
+)}
 
 export default IndexPage
