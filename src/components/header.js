@@ -109,12 +109,13 @@ const Header = ({ siteTitle, siteDescription, siteTag }) => {
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 960,
+          maxWidth: '960px',
           padding: `1.45rem 1.0875rem`,
         }}
       >
         <div
           style={{
+            maxWidth: '1280px',
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
