@@ -1,7 +1,10 @@
-import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+// check this out https://jmolivas.com/how-use-google-spreadsheet-manage-content-and-trigger-deployment-your-gatsbyjs-site
 
-const ArticleItem = ({ props }) => {
+import React from "react"
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
+
+
+const ArticleItem = ({ image, title, text }) => {
   return (
     <div
       style={{
@@ -15,8 +18,8 @@ const ArticleItem = ({ props }) => {
       }}
     >
       <div>
-        <StaticImage
-          src={props.image}
+        <img
+          src={image}
           width={500}
           quality={95}
           formats={["AUTO", "WEBP", "AVIF"]}
@@ -24,12 +27,8 @@ const ArticleItem = ({ props }) => {
         />
       </div>
       <div>
-        <h2>{props.title}</h2>
-        <p>
-          Participé de la Reunión de la Filial Litoral de SADEC: Estimulación
-          del Sitema de Conducción y Experiencias Locales, a cargo del Dr.
-          Horacio Quiroga Ponce.
-        </p>
+        <h2>{title}</h2>
+        <p>{text}</p>
         {/* <Button
           buttonContent={"Leer más"}
           buttonLink="/"
