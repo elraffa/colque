@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: `Dr. Fidel Colque`,
@@ -41,7 +43,7 @@ module.exports = {
         ],
       },
     },
-    // Add and modify this plugin config to your `gatsby-config.js`:
+    //Add and modify this plugin config to your `gatsby-config.js`:
     {
       resolve: "gatsby-source-google-spreadsheet",
       options: {
@@ -72,7 +74,19 @@ module.exports = {
         //
         // When you have generated your credentials, it's easiest to refer to them from an environment variable
         // and parse it directly:
-        credentials: require('./secret.json'),
+        // credentials: JSON.parse(`${process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS}`),
+        credentials: {
+          type: 'service_account',
+          project_id: process.env.PROJECT_ID,
+          private_key_id: process.env.PRIVATE_KEY_ID,
+          private_key: process.env.PRIVATE_KEY.replace(/(\\r)|(\\n)/g, '\n'),
+          client_email: process.env.CLIENT_EMAIL,
+          client_id: '',
+          auth_uri: 'https://accounts.google.com/o/oauth2/auth',
+          token_uri: 'https://oauth2.googleapis.com/token',
+          auth_provider_x509_cert_url: 'https://www.googleapis.com/oauth2/v1/certs',
+          client_x509_cert_url: `https://www.googleapis.com/robot/v1/metadata/x509/${process.env.PROJECT_ID}%40appspot.gserviceaccount.com`,
+        },
 
         // Simple node transformation during node sourcing can be achieved by implementing the following functions
         // - `filterNode`
@@ -87,14 +101,14 @@ module.exports = {
         mapNode: node => node,
       },
     },
-    {
-      resolve: 'gatsby-source-google-sheets',
-      options: {
-        spreadsheetId:'1jGfOsx7ctqha_EN152TY6ZdEUoqoH6fTgm7yr61ph7U',
-        workSheetTitle: 'Sheet1',
-        credentials: require('./secret.json')
-      }
-    }
+    // {
+    //   resolve: 'gatsby-source-google-sheets',
+    //   options: { 
+    //     spreadsheetId:'1jGfOsx7ctqha_EN152TY6ZdEUoqoH6fTgm7yr61ph7U',
+    //     workSheetTitle: 'Sheet1',
+    //     credentials: require('./secret.json')
+    //   }
+    // }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
